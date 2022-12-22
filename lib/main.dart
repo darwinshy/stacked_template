@@ -3,7 +3,6 @@ import 'package:stacked_services/stacked_services.dart';
 import '../app/app.locator.dart';
 import '../app/app.router.dart';
 import '../root.dart';
-import '../app/app.size.dart';
 import '../app/app.theme.dart';
 import 'package:stacked_themes/stacked_themes.dart';
 
@@ -24,16 +23,12 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => ThemeBuilder(
-        themes: getThemes(),
         darkTheme: darkTheme,
         lightTheme: lightTheme,
         builder: materialApp,
       );
 
   Widget materialApp(context, regularTheme, darkTheme, themeMode) {
-    /// * Initialize the size config
-    SizeConfig().init(context);
-
     return MaterialApp(
       title: 'Flutter Demo',
       theme: regularTheme,

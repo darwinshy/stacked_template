@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:stacked/stacked.dart';
+import 'package:stacked_template/app/app.size.dart';
 
 class RootViewModel extends BaseViewModel {
   // __________________________________________________________________________
@@ -17,6 +18,9 @@ class Root extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    /// * Initialize the size config
+    SizeConfig().init(context);
+
     return ViewModelBuilder<RootViewModel>.reactive(
       builder: (_, __, ___) => Scaffold(
         body: Center(
