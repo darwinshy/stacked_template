@@ -5,8 +5,6 @@ Stacked is a set of Flutter packages that help you build reactive, testable and 
 
 ## Getting Started
 
-Change the name of the project using the following command:
-
-```bash
-flutter pub run rename --project-name <new_name>
+```
+Change the name of the project using VS CODE's global search and replace feature.
 ```
