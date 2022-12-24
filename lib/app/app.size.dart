@@ -9,7 +9,7 @@ import 'package:flutter/material.dart';
 /// *   fontSize: getProportionateScreenWidth(10)
 
 class SizeConfig {
-  static late MediaQueryData? _mediaQueryData;
+  static late MediaQueryData? mediaQueryData;
   static double? screenWidth;
   static double? screenHeight;
   static double? defaultSize;
@@ -19,10 +19,10 @@ class SizeConfig {
   double? getScreenHeight() => screenHeight;
 
   void init(BuildContext context) {
-    _mediaQueryData = MediaQuery.of(context);
-    screenWidth = _mediaQueryData!.size.width;
-    screenHeight = _mediaQueryData!.size.height;
-    orientation = _mediaQueryData!.orientation;
+    mediaQueryData = MediaQuery.of(context);
+    screenWidth = mediaQueryData!.size.width;
+    screenHeight = mediaQueryData!.size.height;
+    orientation = mediaQueryData!.orientation;
   }
 }
 
